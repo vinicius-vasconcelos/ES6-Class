@@ -1,0 +1,64 @@
+<<!DOCTYPE html>
+<html>
+	<head>
+		<title>Funções Construtoras</title>
+
+		<script>
+
+			let Carro = function() {
+
+				//atributos
+				let cor = 'Amarelo';
+				let velocidadeAtual = 0;
+				let velocidadeMaxima = 180;
+				let quilometrosRodados = 0;
+
+				//métodos GET e SET
+				this.getCor = function() {
+					return cor;
+				}
+
+				this.setCor = function(cor) {
+					cor = cor;
+				}
+
+				this.getVelocidadeAtual = function() {
+					return velocidadeAtual;
+				}
+
+				this.setVelocidadeAtual = function(velocidadeAtual) {
+					velocidadeAtual = velocidadeAtual;
+				}
+
+				this.getVelocidadeMaxima = function() {
+					return velocidadeMaxima;
+				}
+
+				this.setVelocidadeMaxima = function(velocidadeMaxima) {
+					velocidadeMaxima = velocidadeMaxima;
+				}
+
+
+				//métodos publico
+				this.acelerar = function() {
+					if(getVelocidadeAtual() + 10 <= getVelocidadeMaxima){
+						setVelocidadeAtual(getVelocidadeAtual += 10);
+						kmRodados();
+					}
+				}
+
+
+				//método privado
+				var kmRodados = function() {
+					quilometrosRodados += 0.05;
+				}
+			}
+
+			//Instânciando função construtora 
+			let carro = new Carro();
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

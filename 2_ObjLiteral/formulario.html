@@ -1,0 +1,74 @@
+<<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Teste Obj Literal</title>
+		<meta charset="utf-8">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Exemplo de obj literal (é um obj único, todos apontam para a mesma referência)-->
+		<script>
+
+			function serializar() {
+				//Recuperando dados so formulário
+				let nome = document.getElementById('nome').value;
+				let idade = document.getElementById('idade').value;
+				let sexo = document.getElementById('sexo').value;
+				let profissao = document.getElementById('profissao').value;
+
+				let formularioObj = {
+					nome,
+					idade,
+					sexo,
+					profissao,
+					exibirResumo() {
+						console.log(`Obj: ${this.nome}, ${this.idade} anos, ${this.sexo} e trabalha de ${this.profissao}`);
+					}
+				}
+
+				console.log(formularioObj);
+				formularioObj.exibirResumo();
+
+				//Incluindo atributos e métodos a objetos literais de forma dinâmica
+				formularioObj.estadoCivil = 'solteiro'; //atributo
+				formularioObj.conversar = () => console.log("Olá tudo bem?"); //incluindo métodos
+			}
+
+		</script>
+
+	</head>
+	<body class="bg-dark">
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center bg-light p-2 border">
+						<div class="form-group">
+							<h1 class="display-4">Formulário</h1>
+							<form>
+								<input id="nome" name="nome" type="text" class="form-control mb-2" placeholder="Nome...">
+								<input id="idade" name="idade" type="text" class="form-control mb-2" placeholder="Idade...">
+								<select id="sexo" name="sexo" class="form-control mb-2">
+									<option value="masculino" selected>Masculino</option>
+									<option value="feminino">Feminino</option>
+								</select>
+								<input id="profissao" name="profissao" type="text" class="form-control mb-2" placeholder="Profissao...">
+
+								<button class="btn btn-outline-dark" type="submit" onclick="serializar()">Enviar</button>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>	
+		</div>
+
+
+		<!-- Bootstrap/js/jquery/popper -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	</body>
+</html>

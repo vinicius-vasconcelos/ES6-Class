@@ -1,0 +1,28 @@
+<<!DOCTYPE html>
+<html>
+	<head>
+		<title>Funções Factory</title>
+
+		<script>
+
+			//Obj Factory
+			let BicicletaFactory = function (cor, marcha, aro) {
+				//requisição http e resposta
+				//lógica tratativa
+				return {
+					cor,
+					marca,
+					aro,
+					pedalar() {console.log('Pedalando !!!')}
+				}
+			}
+
+			//chamando o factory
+			let Bicicleta = BicicletaFactory('preto', 18, 26);
+
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>
