@@ -1,5 +1,5 @@
 # ES6-Class
-Exemplos de classes do Javascript (Feitos junto as aulas de Desenvolvimento Web Completo - UDEMY)
+Exemplos de classes do Javascript (Feitos junto as aulas de Desenvolvimento Web Completo - <a href="https://www.udemy.com/"><strong>Udemy</strong></a>)
 <hr>
 
 <ul>
